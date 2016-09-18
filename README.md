@@ -1,6 +1,7 @@
-# matilha_server_boilerplate
+# Matilha RoR Server Boilerplate 
 
-Base project to easy server deployment for RoR
+Base project to easy server deployment for RoR.
+Made with Docker ;)
 
 ##Should provide a base project with:
 - Common gems
@@ -10,7 +11,7 @@ Base project to easy server deployment for RoR
 	- User administration
 	- Password recovery
 	- Https support
-	
+
 
 ##How to
 
