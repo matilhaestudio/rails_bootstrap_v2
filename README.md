@@ -11,6 +11,8 @@ Made with Docker ;)
 	- User administration
 	- Password recovery
 	- Https support
+	- API modules
+	
 
 
 ##How to
