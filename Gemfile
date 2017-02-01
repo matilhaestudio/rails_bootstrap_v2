@@ -55,5 +55,8 @@ group :development do
   gem 'spring'
 
   gem 'pry-rails'
+
+  # Better Errors replaces the standard Rails error page with a much better and more useful error page
+  gem "better_errors"
 end
 
