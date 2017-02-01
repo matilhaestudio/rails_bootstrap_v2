@@ -39,6 +39,12 @@ gem 'meta_request'
 # https://github.com/peek/peek
 gem 'peek'
 
+# Active Admin is a Ruby on Rails framework for creating elegant backends for website administration.
+gem 'activeadmin', github: 'activeadmin'
+
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
