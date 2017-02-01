@@ -35,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Supporting gem for Rails Panel (Google Chrome extension for Rails development)
 gem 'meta_request'
 
+# Profiling tool originally to get an insight into application
+# https://github.com/peek/peek
+gem 'peek'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
