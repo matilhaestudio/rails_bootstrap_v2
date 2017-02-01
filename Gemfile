@@ -45,6 +45,9 @@ gem 'activeadmin', github: 'activeadmin'
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise'
 
+gem 'bootstrap-sass'
+gem 'active_bootstrap_skin'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

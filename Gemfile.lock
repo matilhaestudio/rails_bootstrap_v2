@@ -39,6 +39,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_bootstrap_skin (0.1.4)
+      bootstrap-sass (~> 3.3.6)
     activejob (4.2.7.1)
       activesupport (= 4.2.7.1)
       globalid (>= 0.3.0)
@@ -58,6 +60,8 @@ GEM
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (6.0.4)
+    autoprefixer-rails (6.7.2)
+      execjs
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -65,6 +69,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     bourbon (4.2.7)
       sass (~> 3.4)
       thor (~> 0.19)
@@ -265,8 +272,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_bootstrap_skin
   activeadmin!
   better_errors
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
   devise
