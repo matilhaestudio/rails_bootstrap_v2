@@ -48,6 +48,9 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'active_bootstrap_skin'
 
+# Bootstrap-generators provides Twitter Bootstrap generators for Rails
+gem 'bootstrap-generators', '~> 3.3.4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
