@@ -1,0 +1,97 @@
+
+
+pt-BR:
+  simple_form:
+    "yes": 'Sim'
+    "no": 'Não'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Por favor, verifique os campos com erros:"
+    # Examples
+    labels:
+      defaults:
+        #common
+        rg: RG
+        caregiver_email: 'E-mail'
+        name: Nome
+        surname: Sobrenome
+        birthday: Data de Nascimento
+        genre: Gênero
+        company_name: Razão Social
+        cnpj: CNPJ
+        cpf: CPF
+        responsible_name: Nome
+        responsible_surname: Sobrenome
+        phone: Telefone principal
+        phone2: Telefone secundário
+        email: E-mail
+        zipcode: CEP
+        street: Nome da Rua
+        number: Número
+        neighborhood: Bairro
+        city: Cidade
+        state: Estado
+        complement: Complemento (se houver)
+        password: Senha
+        remember_me: Lembrar senha
+        #allocations
+        date_start: Data início
+        date_end: Data fim
+        monday: Segunda
+        tuesday: Terça
+        wednesday: Quarta
+        thursday: Quinta
+        friday: Sexta
+        saturday: Sábado
+        sunday: Domingo
+        hour_start: Hora início
+        hour_end: Hora fim
+        exchange_reason: Motivo da troca
+        completion_reason: Motivo da finalização
+        date_closed: Data de finalização
+        reallocation_date: Data de realocação
+        #caregiver
+        phone: Telefone principal
+        phone2: Telefone secundário
+        wage_claim: Pretensão salarial
+        professional_council_number: Número do conselho
+        cnh: CNH
+        fb_url: Link facebook
+        linkedin_url: Link LinkedIn
+        observations: Observações
+        languages: Línguas
+        picture: Foto
+        active: Ativo
+        #curriculum_experiences:
+        experience_type: Tipo de experiência
+        title: Título
+        month_start: Mês início
+        year_start: Ano início
+        month_end: Mês fim
+        year_end: Ano fim
+        description: Descrição
+        #patient
+        responsible_kinship: Parentesco
+        responsible_name: Nome
+        responsible_surname: Sobrenome
+        responsible_cpf: CPF
+        responsible_rg: RG
+        responsible_phone: Telefone principal
+        responsible_phone2: Telefone secundário
+        responsible_email: Email
+        own_responsibility: Próprio responsável
+        genre_id: Gênero
+        weight: Peso
+        height: Altura
+        blood_type: Tipo sanguíneo
+        allergies: Alergias
+        picture: Foto
+        medicines: Medicamentos
+        activities: Atividades
+        observations: Observações
+        active: Ativo
