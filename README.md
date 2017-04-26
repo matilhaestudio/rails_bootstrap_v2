@@ -1,5 +1,4 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1688a37a43984e74905c0522904b65b4)](https://www.codacy.com/app/jonas_9/rails_bootstrap_v2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=matilhaestudio/rails_bootstrap_v2&amp;utm_campaign=Badge_Grade)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/1688a37a43984e74905c0522904b65b4)](https://www.codacy.com/app/jonas_9/rails_bootstrap_v2?utm_source=github.com&utm_medium=referral&utm_content=matilhaestudio/rails_bootstrap_v2&utm_campaign=Badge_Coverage)
 
 # Matilha RoR Boilerplate 
