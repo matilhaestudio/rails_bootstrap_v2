@@ -37,10 +37,10 @@ staging:
   <<: *default
   database: matilha_staging
   username: matilha
-  password: <%= ENV['FLORENCE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['MATILHA_DB_PASS'] %>
 
 production:
   <<: *default
   database: matilha_production
   username: matilha
-  password: <%= ENV['FLORENCE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['MATILHA_DB_PASS'] %>
