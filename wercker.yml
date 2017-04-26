@@ -1,0 +1,79 @@
+box: ruby:2.3.3
+# This is the build pipeline. Pipelines are the core of wercker
+# Read more about pipelines on our dev center
+# http://devcenter.wercker.com/docs/pipelines/index.html
+build:
+    services:
+       - id: postgres
+         env:
+           POSTGRES_PASSWORD: $PG_PASS
+           POSTGRES_USER: $PG_USER
+    # Steps make up the actions in your pipeline
+    steps:
+        - install-packages:
+            name: Install node.js, build-essential, libpq-dev
+            packages: build-essential libpq-dev chrpath libssl-dev
+        - bigtruedata/install-node:
+            version: 7.0.0
+        - bundle-install:
+            jobs: 4
+        - script:
+            name: Install PhantomJS
+            code: npm install -g phantomjs
+
+        # Prepare postgresql for Rails
+        - rails-database-yml:
+            service: postgresql-docker
+
+        - script:
+            name: Set up db
+            code: |
+                RAILS_ENV=test bundle exec rake db:schema:load db:migrate
+
+        - script:
+            name: rspec
+            code: bundle exec rspec
+    #Slack Notification
+    # after-steps:
+    #     - slack-notifier:
+    #         url: $SLACK_URL
+    #         channel: $SLACK_CHANNEL
+    #         username: werckerbot
+    #         notify_on: "failed"
+deploy:
+    # Deploy to staging server
+    steps:
+        - heroku-deploy:
+            key: $HEROKU_KEY
+            user: $HEROKU_USER
+            app-name: $HEROKU_APP_NAME
+            run: bundle install --with development && rake db:migrate && RAILS_ENV=test bundle exec rspec spec && RAILS_ENV=staging
+    #     - add-to-known_hosts:
+    #         hostname: $STAGING_IP_ADDRESS
+    #     - add-ssh-key:
+    #         keyname: $KEYNAME
+    #     - mktemp:
+    #         envvar: PRIVATEKEY_PATH
+    #     - create-file:
+    #         name: write key
+    #         filename: $PRIVATEKEY_PATH
+    #         content: $FLORENCE_PRIVATE
+    #         overwrite: true
+    #     - script:
+    #         name: transfer application
+    #         code: |
+    #           pwd
+    #           ls -la
+    #           echo "cd $PROJECT_FOLDER && git pull origin dev && rvm use 2.3.3 && bundle install && rake db:migrate &&  kill \`cat $PROJECT_FOLDER/tmp/pids/server.pid\`; rails s -d -b $STAGING_IP_ADDRESS -p 8080" | ssh root@$STAGING_IP_ADDRESS
+    # after-steps:
+    #     - slack-notifier:
+    #         url: $SLACK_URL
+    #         channel: $SLACK_CHANNEL
+    #         username: werckerbot
+              #notify_on: "failed"          
+    after-steps:
+        - slack-notifier:
+            url: $SLACK_URL
+            channel: $SLACK_CHANNEL
+            username: werckerbot
+            #notify_on: "failed"
