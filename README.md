@@ -30,7 +30,7 @@ url: TBD
 	```heroku git:remote -a newname```
 	```bundle install --with development test```
 	```heroku ps```
-	```heroku ps:stop <pid> ``
+	```heroku ps:stop <pid> ```
 
 ## Versions
 	Ruby 2.3.3
@@ -67,13 +67,13 @@ url: TBD
 
 	```rake db:seeds```
 
-##Steps to run locally
+## Steps to run locally
 	```bundle exec puma```
 
-##Steps to run on staging
+## Steps to run on staging
 	TBD
 
-##Steps to test
+## Steps to test
 
 	```RAILS_ENV=test rake db:create```
 
@@ -83,14 +83,14 @@ url: TBD
 
 	```export CODACY_RUN_LOCAL=true```
 
-##Steps to deploy
+## Steps to deploy
 	1. Do a merge from your feature branch with dev
 	2. Run tests
 	3. Run seeds
 	4. Check Codacy
 	5. Check your build on our CI server
 
-##Steps to commit
+## Steps to commit
 	1. Give a clear commit msg
 	2. Send a PR to your feature branch
 
