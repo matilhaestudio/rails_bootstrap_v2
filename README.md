@@ -19,24 +19,24 @@ Made with Docker ;)
 url: TBD
 
 ### Heroku cheatsheet
-```heroku logs --tail```
-```heroku config:set RAILS_ENV=test```
-```heroku pg:reset -r heroku ```
-```heroku run rake db:schema:load -r heroku```
-```heroku run bash```
-```bundle install --without nothing```
-```heroku plugins:install https://github.com/naaman/heroku-vim```
-```rm .bundler/config```
-```heroku git:remote -a newname```
-```bundle install --with development test```
-```heroku ps```
-```heroku ps:stop <pid> ``
+	```heroku logs --tail```
+	```heroku config:set RAILS_ENV=test```
+	```heroku pg:reset -r heroku ```
+	```heroku run rake db:schema:load -r heroku```
+	```heroku run bash```
+	```bundle install --without nothing```
+	```heroku plugins:install https://github.com/naaman/heroku-vim```
+	```rm .bundler/config```
+	```heroku git:remote -a newname```
+	```bundle install --with development test```
+	```heroku ps```
+	```heroku ps:stop <pid> ``
 
-##Versions
-Ruby 2.3.3
-Rails 4.2.7.1
+## Versions
+	Ruby 2.3.3
+	Rails 4.2.7.1
 
-##Steps to build
+## Steps to build
 
 1. Install ruby project version with rbenv or rmv
 
@@ -55,25 +55,26 @@ Rails 4.2.7.1
 
 4. Run postgres
 
-```postgres -D /usr/local/var/postgres```
+	```postgres -D /usr/local/var/postgres```
 
 5. Run rails app
 
-```bundle install```
+	```bundle install```
 
-```rake db:create```
+	```rake db:create```
 
-```rake db:migrate```
+	```rake db:migrate```
 
-```rake db:seeds```
+	```rake db:seeds```
 
 ##Steps to run locally
-``` bundle exec puma```
+	```bundle exec puma```
 
 ##Steps to run on staging
-TBD
+	TBD
 
 ##Steps to test
+
 	```RAILS_ENV=test rake db:create```
 
 	```bundle exec rspec spec```
@@ -83,17 +84,17 @@ TBD
 	```export CODACY_RUN_LOCAL=true```
 
 ##Steps to deploy
-1. Do a merge from your feature branch with dev
-2. Run tests
-3. Run seeds
-4. Check Codacy
-5. Check your build on our CI server
+	1. Do a merge from your feature branch with dev
+	2. Run tests
+	3. Run seeds
+	4. Check Codacy
+	5. Check your build on our CI server
 
 ##Steps to commit
-1. Give a clear commit msg
-2. Send a PR to your feature branch
+	1. Give a clear commit msg
+	2. Send a PR to your feature branch
 
-###Common issues and tricks
+### Common issues and tricks
 
 #### Rails console not working
 ```rm -r bin/*```
@@ -111,10 +112,10 @@ http://stackoverflow.com/questions/18664074/getting-error-peer-authentication-fa
 
 ```sudo service postgresql restart```
 
-####Error while installing ruby with rbenv on MAc
+#### Error while installing ruby with rbenv on MAc
 ```xcode-select --install```
 
-####Error about yml not found
+#### Error about yml not found
 spring stop
 
 
@@ -124,5 +125,5 @@ or
 ```heroku git:remote -a <app-name>```
 
 
-###Any Doubts?
+### Any Doubts?
 jonas@matilhaestud.io
