@@ -76,6 +76,8 @@ group :development, :test do
   gem "faker"
   gem 'pry-rails'
   gem 'xray-rails'
+  gem 'overcommit', '~> 0.38.0', require: false
+  gem 'rubocop', '~> 0.47.1', require: false
 end
 
 group :development do
