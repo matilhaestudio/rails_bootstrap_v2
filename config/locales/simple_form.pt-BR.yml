@@ -38,6 +38,7 @@ pt-BR:
         state: Estado
         complement: Complemento (se houver)
         password: Senha
+        password_confirmation: Confirmar Senha
         remember_me: Lembrar senha
         #allocations
         date_start: Data início
