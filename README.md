@@ -30,7 +30,7 @@ url: TBD
 	```heroku git:remote -a newname```
 	```bundle install --with development test```
 	```heroku ps```
-	```heroku ps:stop <pid> ```
+	```heroku ps:stop <pid> ``
 
 ## Versions
 	Ruby 2.3.3
