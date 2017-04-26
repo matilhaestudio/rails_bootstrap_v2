@@ -21,6 +21,9 @@ Base project to easy server deployment for RoR.
 ## Staging on Heroku
 url: TBD
 
+### List routes
+http://localhost:3000/rails/info/routes
+
 ### Heroku cheatsheet
 	```heroku logs --tail```
 	```heroku config:set RAILS_ENV=test```
