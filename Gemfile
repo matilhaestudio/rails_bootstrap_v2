@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.7.1'
 # Postgres SQL
 #gem 'pg', '~> 0.18.4'
-gem 'dm-mongo-adapter', '~> 0.6.0'
-gem 'mongoid', '~> 4.0.2'
+#gem 'dm-mongo-adapter', '~> 0.6.0'
+gem 'mongoid', '~> 5.1', '>= 5.1.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Solves problem of "Could not find a JavaScript runtime" with uglifier gem
