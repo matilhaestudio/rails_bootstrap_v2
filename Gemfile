@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
 # Postgres SQL
-gem 'pg', '~> 0.18.4'
+#gem 'pg', '~> 0.18.4'
+gem 'dm-mongo-adapter', '~> 0.6.0'
+gem 'mongoid', '~> 4.0.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Solves problem of "Could not find a JavaScript runtime" with uglifier gem
