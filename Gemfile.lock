@@ -59,6 +59,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     brakeman (3.6.1)
+    bson (3.2.6)
     builder (3.2.3)
     byebug (9.0.6)
     callsite (0.0.11)
@@ -94,6 +95,7 @@ GEM
     concurrent-ruby (1.0.4)
     concurrent-ruby-ext (1.0.4)
       concurrent-ruby (= 1.0.4)
+    connection_pool (2.2.1)
     cpf_cnpj (0.3.0)
     database_cleaner (1.5.3)
     debug_inspector (0.0.2)
@@ -152,11 +154,22 @@ GEM
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    mongoid (4.0.2)
+      activemodel (~> 4.0)
+      moped (~> 2.0.0)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
+    moped (2.0.7)
+      bson (~> 3.0)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
     multi_json (1.12.1)
     netrc (0.11.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     nprogress-rails (0.2.0.2)
+    optionable (0.2.0)
+    origin (2.3.1)
     orm_adapter (0.5.0)
     overcommit (0.38.0)
       childprocess (~> 0.5.8)
@@ -176,7 +189,6 @@ GEM
       concurrent-ruby (>= 0.9.0)
       concurrent-ruby-ext (>= 0.9.0)
       railties (>= 3.0.0)
-    pg (0.18.4)
     poltergeist (1.14.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -370,12 +382,12 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   meta_request
+  mongoid (~> 4.0.2)
   nprogress-rails
   overcommit (~> 0.38.0)
   paperclip (~> 5.0.0)
   paperclip-cloudinary
   peek
-  pg (~> 0.18.4)
   poltergeist
   pry-rails
   puma
