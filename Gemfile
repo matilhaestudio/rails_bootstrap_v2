@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Forms made easy!
 gem 'simple_form', '~> 3.5'
+gem 'simple_form_custom_inputs', '~> 0.1.0'
 # Cocoon makes it easier to handle nested forms.
 gem 'cocoon', '~> 1.2'
 # underscore.js asset pipeline provider/wrapper
@@ -50,6 +51,10 @@ gem 'sendgrid', '~> 1.2.4'
 gem 'nprogress-rails', '~> 0.2.0.2'
 # Useful to make forms and validations, get a list of states in a country
 gem 'city-state', '~> 0.0.13'
+# Bug Tracking 
+gem 'sentry-raven', '~> 2.5', '>= 2.5.1'
+# Alerts with confirmation
+gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
 
 group :development do
   # Supporting gem for Rails Panel (Google Chrome extension for Rails development)
@@ -81,8 +86,6 @@ group :development, :test do
   gem 'rubocop', '~> 0.47.1', require: false
 end
 
-
-
 group :test do
   gem 'poltergeist'
   gem 'rspec-rails', '~> 3.5'
@@ -102,6 +105,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-svg-injector'
   gem 'rails-assets-switchery'
   gem 'rails-assets-jquery.maskedinput'
+  # Alerts with confirmation
+  gem 'rails-assets-sweetalert'
 end
 
 

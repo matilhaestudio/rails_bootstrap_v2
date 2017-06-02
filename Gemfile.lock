@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/marcelobarreto/sweet-alert-rails-confirm.git
+  revision: 1c58b4e86974b56b0599f8747de534c4c3f63be8
+  specs:
+    sweet-alert-confirm (0.4.1)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -117,6 +123,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.7.3)
       i18n (~> 0.5)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -158,6 +166,7 @@ GEM
       activemodel (~> 5.0)
       mongo (>= 2.4.1, < 3.0.0)
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.7.2)
@@ -222,6 +231,7 @@ GEM
       rails-assets-jquery (>= 1.8.3)
     rails-assets-noty (3.1.0)
     rails-assets-svg-injector (1.1.3)
+    rails-assets-sweetalert (1.1.3)
     rails-assets-switchery (0.8.2)
       rails-assets-fastclick (= 0.6.11)
       rails-assets-transitionize
@@ -291,11 +301,14 @@ GEM
       rdoc (~> 4.0)
     sendgrid (1.2.4)
       json
+    sentry-raven (2.5.1)
+      faraday (>= 0.7.6, < 1.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simple_form (3.5.0)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
+    simple_form_custom_inputs (0.1.0)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -387,6 +400,7 @@ DEPENDENCIES
   rails-assets-jquery.maskedinput!
   rails-assets-noty!
   rails-assets-svg-injector!
+  rails-assets-sweetalert!
   rails-assets-switchery!
   rails_12factor
   rspec-rails (~> 3.5)
@@ -394,10 +408,13 @@ DEPENDENCIES
   sass-rails (~> 5.0.6)
   sdoc (~> 0.4.0)
   sendgrid (~> 1.2.4)
+  sentry-raven (~> 2.5, >= 2.5.1)
   shoulda-matchers (~> 3.0)
   simple_form (~> 3.5)
+  simple_form_custom_inputs (~> 0.1.0)
   simplecov
   spring
+  sweet-alert-confirm!
   therubyracer (~> 0.12)
   turbolinks (~> 5.0)
   uglifier (~> 3.2.0)
