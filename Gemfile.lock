@@ -65,6 +65,7 @@ GEM
       sass (>= 3.3.4)
     brakeman (3.6.2)
     bson (4.2.1)
+    bson_ext (1.5.1)
     builder (3.2.3)
     callsite (0.0.11)
     capybara (2.14.0)
@@ -366,6 +367,7 @@ DEPENDENCIES
   bootstrap-generators (~> 3.3.4)
   bootstrap-sass (~> 3.3)
   brakeman (~> 3.6, >= 3.6.2)
+  bson_ext
   capybara (~> 2.14)
   city-state (~> 0.0.13)
   cloudinary (~> 1.8.0)

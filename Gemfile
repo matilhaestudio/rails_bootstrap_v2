@@ -9,6 +9,8 @@ gem 'puma'
 # gem 'pg', '~> 0.18.4'
 # MongoDB NoSQL
 gem 'mongoid', '~> 6.1.0'
+# C extensions to accelerate the Ruby BSON serialization used by Mongoid
+gem 'bson_ext'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.6'
 # Bootstrap-generators provides Twitter Bootstrap generators for Rails
