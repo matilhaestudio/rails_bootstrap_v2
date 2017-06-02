@@ -57,6 +57,8 @@ gem 'city-state', '~> 0.0.13'
 gem 'sentry-raven', '~> 2.5', '>= 2.5.1'
 # Alerts with confirmation
 gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
+# A set of Rails responders to dry up your application
+gem 'responders', '~> 2.3'
 
 group :development do
   # Supporting gem for Rails Panel (Google Chrome extension for Rails development)

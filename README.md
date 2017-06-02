@@ -6,6 +6,8 @@
 
 Base project to easy server deployment for RoR.
 
+Roadmap at: [link](https://trello.com/b/CVhMgnWo/%5Bpublic%5D-matilha---rails-bootstrap)
+
 ## Playbook
 ***It's dangerous to go alone! Read [this](https://github.com/matilhaestudio/dev-playbook)!***
 

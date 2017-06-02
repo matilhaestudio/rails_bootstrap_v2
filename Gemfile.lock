@@ -399,6 +399,7 @@ DEPENDENCIES
   rails-assets-sweetalert!
   rails-assets-switchery!
   rails_12factor (~> 0.0.3)
+  responders (~> 2.3)
   rspec-rails (~> 3.6)
   rubocop (~> 0.47.1)
   sass-rails (~> 5.0.6)
