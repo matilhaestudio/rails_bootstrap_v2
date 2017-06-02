@@ -41,7 +41,8 @@ gem 'underscore-rails', '~> 1.8'
 gem 'validate_url', '~> 1.0'
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise', '~> 4.3'
-# Easy file attachment management for ActiveRecord
+
+# Easy file attachment management
 # gem 'paperclip', '~> 5.0.0'
 gem 'cloudinary', '~> 1.8.0'
 # gem 'paperclip-cloudinary', '~> 1.3.0'
@@ -74,17 +75,15 @@ group :development do
   # Profiling tool originally to get an insight into application
   # https://github.com/peek/peek
   gem 'peek', '~> 1.0', '>= 1.0.1'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring', '~> 2.0', '>= 2.0.2'
+ 
   # Better Errors replaces the standard Rails error page with a much better and more useful error page
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   # Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
   gem 'brakeman', '~> 3.6', '>= 3.6.2'
   # Provides a dev bar and an overlay in-browser to visualize your UI's rendered partials
   gem 'xray-rails', '~> 0.3.0'
-  # Console Debugger
-  gem 'pry-rails', '~> 0.3.6'
-   # Is used to easily generate fake data: names, addresses, phone numbers, etc.
+  
+  # Is used to easily generate fake data: names, addresses, phone numbers, etc.
   gem 'faker', '~> 1.7', '>= 1.7.3'
   # Utility to install, configure, and extend Git hooks
   gem 'overcommit', '~> 0.39.0', require: false
@@ -92,6 +91,13 @@ group :development do
   gem 'rubocop', '~> 0.47.1', require: false
   # Retrieve the binding of a method's caller. Can also retrieve bindings even further up the stack.
   gem 'binding_of_caller', '~> 0.7.2'
+end
+
+group :development, :test do
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring', '~> 2.0', '>= 2.0.2'
+  # Console Debugger
+  gem 'pry-rails', '~> 0.3.6'
 end
 
 group :test do
