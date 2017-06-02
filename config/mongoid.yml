@@ -145,3 +145,18 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+production:
+  clients:
+    default:
+     # The standard MongoDB connection URI allows for easy
+     # replica set connection setup.
+     # Use environment variables or a config file to keep your
+     # credentials safe e.g. <%= ENV['MONGODB_URI'] %>.
+     uri: mongodb://heroku_4gd59kbk:lcspm47fshtfjil4l6e6kgbfao@ds161021.mlab.com:61021/heroku_4gd59kbk
+
+     options:
+       # The default timeout is 5, which is the time in seconds
+       # for a connection to time out.
+       # We recommend 15 because it allows for plenty of time
+       # in most operating environments.
+       connect_timeout: 15
