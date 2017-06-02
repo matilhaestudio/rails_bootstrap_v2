@@ -4,7 +4,7 @@ gem 'rails', '5.0.3'
 # Makes running your Rails app easier. Based on the ideas behind 12factor.net
 gem 'rails_12factor', '~> 0.0.3', group: :production
 # web server
-gem 'puma'
+# gem 'puma'
 # Postgres SQL
 # gem 'pg', '~> 0.18.4'
 # MongoDB NoSQL
@@ -14,7 +14,7 @@ gem 'bson_ext'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.6'
 # Bootstrap-generators provides Twitter Bootstrap generators for Rails
-gem 'bootstrap-sass', '~> 3.3'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-generators', '~> 3.3.4'
 # Solves problem of "Could not find a JavaScript runtime" with uglifier gem
 gem 'therubyracer', '~> 0.12'
