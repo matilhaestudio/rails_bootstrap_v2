@@ -42,9 +42,11 @@ gem 'validate_url', '~> 1.0'
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise', '~> 4.3'
 # Easy file attachment management for ActiveRecord
-gem 'paperclip', '~> 5.0.0'
+# gem 'paperclip', '~> 5.0.0'
 gem 'cloudinary', '~> 1.8.0'
-gem 'paperclip-cloudinary', '~> 1.3.0'
+# gem 'paperclip-cloudinary', '~> 1.3.0'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
 # ActiveModel/ActiveRecord validators
 gem 'validators', '~> 2.5.0'
 # Validate, generate and format CPF/CNPJ numbers
