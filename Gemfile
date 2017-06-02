@@ -88,6 +88,8 @@ group :development do
   gem 'overcommit', '~> 0.39.0', require: false
   # Automatic Ruby code style checking tool
   gem 'rubocop', '~> 0.47.1', require: false
+  # Retrieve the binding of a method's caller. Can also retrieve bindings even further up the stack.
+  gem 'binding_of_caller', '~> 0.7.2'
 end
 
 group :test do

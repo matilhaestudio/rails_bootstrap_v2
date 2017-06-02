@@ -1,3 +1,5 @@
+require "#{Rails.root}/app/datatables/posts_datatables"
+
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -5,7 +7,13 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    respond_with(@posts)
+    #respond_with(@posts)
+    respond_to do |format|
+      format.html
+      format.json {
+        render json: ::PostsDatatable.new(view_context, @posts)
+      }
+    end
   end
 
   def show
