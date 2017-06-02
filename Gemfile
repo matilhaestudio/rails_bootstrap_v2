@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.3'
+# Makes running your Rails app easier. Based on the ideas behind 12factor.net
+gem 'rails_12factor', '~> 0.0.3', group: :production
 # web server
 gem 'puma'
 # Postgres SQL
@@ -60,50 +62,60 @@ group :development do
   # Supporting gem for Rails Panel (Google Chrome extension for Rails development)
   gem 'meta_request',  '~> 0.4'
   # Open e-mails on browser tab
-  gem 'letter_opener'
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.5', '>= 3.5.1'
   # Profiling tool originally to get an insight into application
   # https://github.com/peek/peek
-  gem 'peek', '~> 1.0'
+  gem 'peek', '~> 1.0', '>= 1.0.1'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '~> 2.0', '>= 2.0.2'
   # Better Errors replaces the standard Rails error page with a much better and more useful error page
-  gem "better_errors"
-  gem 'brakeman', :require => false
-end
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'factory_girl_rails'
-  gem 'simplecov', :require => false
-  gem 'codacy-coverage', :require => false
-  gem "faker"
-  gem 'pry-rails'
-  gem 'xray-rails'
-  gem 'overcommit', '~> 0.38.0', require: false
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  # Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
+  gem 'brakeman', '~> 3.6', '>= 3.6.2'
+  # Provides a dev bar and an overlay in-browser to visualize your UI's rendered partials
+  gem 'xray-rails', '~> 0.3.0'
+  # Console Debugger
+  gem 'pry-rails', '~> 0.3.6'
+   # Is used to easily generate fake data: names, addresses, phone numbers, etc.
+  gem 'faker', '~> 1.7', '>= 1.7.3'
+  # Utility to install, configure, and extend Git hooks
+  gem 'overcommit', '~> 0.39.0', require: false
+  # Automatic Ruby code style checking tool
   gem 'rubocop', '~> 0.47.1', require: false
 end
 
 group :test do
-  gem 'poltergeist'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'shoulda-matchers', '~> 3.0'
-  gem 'database_cleaner'
-  gem 'capybara'
-end
-
-group :staging, :production do
-  gem 'rails_12factor'
+  # Support for multiple factories for the same class (user, admin_user, and so on)
+  gem 'factory_girl_rails', '~> 4.8'
+  # Coverage across test suites
+  gem 'simplecov', '~> 0.14.1', :require => false
+  # Post code coverage results to Codacy.
+  gem 'codacy-coverage', :require => false
+  # Poltergeist is a driver for Capybara that allows you to run your tests on a headless WebKit browser, provided by PhantomJS
+  gem 'poltergeist', '~> 1.15'
+  # rspec-rails is a testing framework
+  gem 'rspec-rails', '~> 3.6'
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that test common Rails functionality.
+  gem 'shoulda-matchers', '~> 3.1'
+  # Strategies for cleaning databases. Can be used to ensure a clean state for testing.
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+  # Capybara is an integration testing tool for rack based web applications. It simulates how a user would interact with a website
+  gem 'capybara', '~> 2.14'
 end
 
 source 'https://rails-assets.org' do
+  # NOTY is a notification library that makes it easy to create alert 
   gem 'rails-assets-noty'
+  # DataTables is a plug-in for advanced interaction controls to any HTML table.
   gem 'rails-assets-datatables.net'
   gem 'rails-assets-datatables.net-bs'
+  # A fast, caching, dynamic inline SVG DOM injection library.
   gem 'rails-assets-svg-injector'
+  # Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style 
   gem 'rails-assets-switchery'
+  #  It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc)
   gem 'rails-assets-jquery.maskedinput'
   # Alerts with confirmation
   gem 'rails-assets-sweetalert'

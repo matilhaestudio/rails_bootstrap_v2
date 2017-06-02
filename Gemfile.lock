@@ -57,8 +57,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
+    bindex (0.5.0)
     bootstrap-generators (3.3.4)
       railties (>= 3.1.0)
     bootstrap-sass (3.3.7)
@@ -67,7 +66,6 @@ GEM
     brakeman (3.6.2)
     bson (4.2.1)
     builder (3.2.3)
-    byebug (9.0.6)
     callsite (0.0.11)
     capybara (2.14.0)
       addressable
@@ -76,7 +74,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    childprocess (0.5.9)
+    childprocess (0.6.3)
       ffi (~> 1.0, >= 1.0.11)
     city-state (0.0.13)
       rubyzip (~> 1.1)
@@ -103,7 +101,6 @@ GEM
       concurrent-ruby (= 1.0.5)
     cpf_cnpj (0.3.0)
     database_cleaner (1.6.1)
-    debug_inspector (0.0.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -173,8 +170,8 @@ GEM
       mini_portile2 (~> 2.1.0)
     nprogress-rails (0.2.0.2)
     orm_adapter (0.5.0)
-    overcommit (0.38.0)
-      childprocess (~> 0.5.8)
+    overcommit (0.39.1)
+      childprocess (~> 0.6.3)
       iniparse (~> 1.4)
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
@@ -348,11 +345,11 @@ GEM
     validators (2.5.3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (2.3.0)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
+    web-console (3.5.1)
+      actionview (>= 5.0)
+      activemodel (>= 5.0)
+      bindex (>= 0.4.0)
+      railties (>= 5.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -365,34 +362,33 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors
+  better_errors (~> 2.1, >= 2.1.1)
   bootstrap-generators (~> 3.3.4)
   bootstrap-sass (~> 3.3)
-  brakeman
-  byebug
-  capybara
+  brakeman (~> 3.6, >= 3.6.2)
+  capybara (~> 2.14)
   city-state (~> 0.0.13)
   cloudinary (~> 1.8.0)
   cocoon (~> 1.2)
   codacy-coverage
   coffee-rails (~> 4.2.0)
   cpf_cnpj (~> 0.3.0)
-  database_cleaner
+  database_cleaner (~> 1.6, >= 1.6.1)
   devise (~> 4.3)
-  factory_girl_rails
-  faker
+  factory_girl_rails (~> 4.8)
+  faker (~> 1.7, >= 1.7.3)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.3)
-  letter_opener
+  letter_opener (~> 1.4, >= 1.4.1)
   meta_request (~> 0.4)
   mongoid (~> 6.1.0)
   nprogress-rails (~> 0.2.0.2)
-  overcommit (~> 0.38.0)
+  overcommit (~> 0.39.0)
   paperclip (~> 5.0.0)
   paperclip-cloudinary (~> 1.3.0)
-  peek (~> 1.0)
-  poltergeist
-  pry-rails
+  peek (~> 1.0, >= 1.0.1)
+  poltergeist (~> 1.15)
+  pry-rails (~> 0.3.6)
   puma
   rails (= 5.0.3)
   rails-assets-datatables.net!
@@ -402,18 +398,18 @@ DEPENDENCIES
   rails-assets-svg-injector!
   rails-assets-sweetalert!
   rails-assets-switchery!
-  rails_12factor
-  rspec-rails (~> 3.5)
+  rails_12factor (~> 0.0.3)
+  rspec-rails (~> 3.6)
   rubocop (~> 0.47.1)
   sass-rails (~> 5.0.6)
   sdoc (~> 0.4.0)
   sendgrid (~> 1.2.4)
   sentry-raven (~> 2.5, >= 2.5.1)
-  shoulda-matchers (~> 3.0)
+  shoulda-matchers (~> 3.1)
   simple_form (~> 3.5)
   simple_form_custom_inputs (~> 0.1.0)
-  simplecov
-  spring
+  simplecov (~> 0.14.1)
+  spring (~> 2.0, >= 2.0.2)
   sweet-alert-confirm!
   therubyracer (~> 0.12)
   turbolinks (~> 5.0)
@@ -421,8 +417,8 @@ DEPENDENCIES
   underscore-rails (~> 1.8)
   validate_url (~> 1.0)
   validators (~> 2.5.0)
-  web-console (~> 2.0)
-  xray-rails
+  web-console (~> 3.5, >= 3.5.1)
+  xray-rails (~> 0.3.0)
 
 BUNDLED WITH
    1.14.6
