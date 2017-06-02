@@ -1,71 +1,72 @@
 source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.3'
+# web server
+gem 'puma'
 # Postgres SQL
 # gem 'pg', '~> 0.18.4'
 # MongoDB NoSQL
 gem 'mongoid', '~> 6.1.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0.6'
+# Bootstrap-generators provides Twitter Bootstrap generators for Rails
+gem 'bootstrap-sass', '~> 3.3'
+gem 'bootstrap-generators', '~> 3.3.4'
 # Solves problem of "Could not find a JavaScript runtime" with uglifier gem
-gem 'therubyracer'
+gem 'therubyracer', '~> 0.12'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '~> 3.2.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
+gem 'coffee-rails', '~> 4.2.0'
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '~> 5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'simple_form'
-gem 'cocoon'
-gem 'underscore-rails'
-gem 'validate_url'
-gem 'puma'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Supporting gem for Rails Panel (Google Chrome extension for Rails development)
-gem 'meta_request'
-
-# Profiling tool originally to get an insight into application
-# https://github.com/peek/peek
-gem 'peek'
-
+# Forms made easy!
+gem 'simple_form', '~> 3.5'
+# Cocoon makes it easier to handle nested forms.
+gem 'cocoon', '~> 1.2'
+# underscore.js asset pipeline provider/wrapper
+gem 'underscore-rails', '~> 1.8'
+# Library for validating urls in Rails.
+gem 'validate_url', '~> 1.0'
 # Devise is a flexible authentication solution for Rails based on Warden
-gem 'devise'
-
-gem 'bootstrap-sass'
-gem 'active_bootstrap_skin'
-
-# Bootstrap-generators provides Twitter Bootstrap generators for Rails
-gem 'bootstrap-generators', '~> 3.3.4'
-
+gem 'devise', '~> 4.3'
 # Easy file attachment management for ActiveRecord
 gem 'paperclip', '~> 5.0.0'
-gem 'cloudinary'
-gem 'paperclip-cloudinary'
+gem 'cloudinary', '~> 1.8.0'
+gem 'paperclip-cloudinary', '~> 1.3.0'
+# ActiveModel/ActiveRecord validators
+gem 'validators', '~> 2.5.0'
+# Validate, generate and format CPF/CNPJ numbers
+gem 'cpf_cnpj', '~> 0.3.0'
+# Simple integration between ActionMailer and SendGrid
+gem 'sendgrid', '~> 1.2.4'
+# Slim progress bars for Ajax'y applications.
+gem 'nprogress-rails', '~> 0.2.0.2'
+# Useful to make forms and validations, get a list of states in a country
+gem 'city-state', '~> 0.0.13'
 
-
-gem 'validators'
-gem 'cpf_cnpj'
-gem 'sendgrid'
-gem 'nprogress-rails'
-gem 'city-state'
+group :development do
+  # Supporting gem for Rails Panel (Google Chrome extension for Rails development)
+  gem 'meta_request',  '~> 0.4'
+  # Open e-mails on browser tab
+  gem 'letter_opener'
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+  # Profiling tool originally to get an insight into application
+  # https://github.com/peek/peek
+  gem 'peek', '~> 1.0'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  # Better Errors replaces the standard Rails error page with a much better and more useful error page
+  gem "better_errors"
+  gem 'brakeman', :require => false
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -80,20 +81,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.47.1', require: false
 end
 
-group :development do
-  gem 'letter_opener'
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-
-  # Better Errors replaces the standard Rails error page with a much better and more useful error page
-
-  gem "better_errors"
-
-  gem 'brakeman', :require => false
-end
 
 group :test do
   gem 'poltergeist'
