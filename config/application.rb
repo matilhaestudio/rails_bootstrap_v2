@@ -1,7 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
+# For Pg SQL
 # require 'rails/all'
-# for mongo db purpouses
+
+# For MongoDb 
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "sprockets/railtie"
@@ -14,9 +16,13 @@ Bundler.require(*Rails.groups)
 module RailsKickstartServer
   class Application < Rails::Application
     Mongoid.load!("config/mongoid.yml")
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    Mongoid.load!("config/mongoid.yml")
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.

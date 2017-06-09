@@ -1,0 +1,25 @@
+<div class="page-header">
+  <%= link_to new_post_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Post
+  <% end %>
+  <h1>Listing posts</h1>
+  </div>
+   <div class="table-responsive">
+    <table class="table dt hide-first-column" data-source="<%= posts_url(active: params[:active], format: :json) %>">
+      <thead>
+        <tr>
+          <th style="display: none">criado em</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th class="datatable-nosort"></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+       
+    
+    </div>
+  </div>
+</div>
