@@ -5,8 +5,6 @@ gem 'rails', '5.0.3'
 gem 'rails_12factor', '~> 0.0.3', group: :production
 # web server
 gem 'puma'
-# Postgres SQL
- gem 'pg', '~> 0.18.4'
 # MongoDB NoSQL
 # gem 'mongoid', '~> 6.1.0'
 # C extensions to accelerate the Ruby BSON serialization used by Mongoid
@@ -65,7 +63,14 @@ gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
 # A set of Rails responders to dry up your application
 gem 'responders', '~> 2.3'
 
+group :production do
+  # Postgres SQL
+  gem 'pg', '~> 0.18.4'
+end
+
 group :development do
+  #SQL lite
+  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
   # Supporting gem for Rails Panel (Google Chrome extension for Rails development)
   gem 'meta_request',  '~> 0.4'
   # Open e-mails on browser tab
