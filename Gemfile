@@ -39,6 +39,9 @@ gem 'underscore-rails', '~> 1.8'
 gem 'validate_url', '~> 1.0'
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise', '~> 4.3'
+# Gems for devise customizations
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 
 # Easy file attachment management
 # gem 'paperclip', '~> 5.0.0'
