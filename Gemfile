@@ -65,6 +65,8 @@ gem 'sentry-raven', '~> 2.5', '>= 2.5.1'
 gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
 # A set of Rails responders to dry up your application
 gem 'responders', '~> 2.3'
+#Zipcode auto complete
+gem 'autocomplete_zipcode', '~> 0.1.0'
 
 group :production do
   # Postgres SQL

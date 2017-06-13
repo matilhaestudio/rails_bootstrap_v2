@@ -17,5 +17,6 @@
 //= require noty
 //= require turbolinks
 //= require bootstrap
+//= require autocomplete_zipcode
 //= require_tree .
 
