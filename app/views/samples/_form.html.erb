@@ -14,7 +14,7 @@
 
   <%= f.input :first_name, placeholder: 'Digite seu nome' %>
   <%= f.input :last_name, placeholder: 'Digite seu sobrenome' %>
-  <%= f.input :picture %>
+  <%= f.file_field :picture %>
   <%= f.input :cpf, placeholder: '000.000.000-00' %>
   <%= f.input :rg, placeholder: '00.000.000-0' %>
   <%= f.input :birthday, placeholder: 'dd / mm / aaaa', as: :string, input_html: { 'data-provide': "datepicker"} %>

@@ -47,7 +47,8 @@ gem 'devise-bootstrap-views'
 # gem 'paperclip', '~> 5.0.0'
 gem 'cloudinary', '~> 1.8.0'
 # gem 'paperclip-cloudinary', '~> 1.3.0'
-# gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 # ActiveModel/ActiveRecord validators
 gem 'validators', '~> 2.5.0'

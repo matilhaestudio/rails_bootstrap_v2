@@ -48,7 +48,8 @@
   <dd><%= @sample.birthday %></dd>
 
   <dt>Picture:</dt>
-  <dd><%= @sample.picture %></dd>
+  <!--<dd><%= image_tag(@sample.picture.to_s) %></dd>-->
+  <dd><%= image_tag(@sample.picture.url(:thumb).to_s) %></dd>
 
   <dt>Cpf:</dt>
   <dd><%= @sample.cpf %></dd>
