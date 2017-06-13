@@ -27,6 +27,9 @@ Noty = {
     });
 }
 
+$ = jQuery;
+$.noty.defaults.timeout = 5000;
+
 datatablesI18n = {
   "sEmptyTable": "Nenhum registro encontrado",
   "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
