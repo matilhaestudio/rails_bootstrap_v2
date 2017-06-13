@@ -24,8 +24,8 @@ pt-BR:
         neighborhood: Bairro
         city: Cidade
         state: Estado
-        complement: Complemento (se houver)
-        phone: Telefone principal
+        complement: Complemento
+        phone: Telefone 
         fb_url: Link facebook
         linkedin_url: Link LinkedIn
         languages: Línguas
