@@ -1,7 +1,16 @@
 <%= simple_form_for @sample, defaults: { input_html: { class: 'form-horizontal', role: "form"  } }  do |f| %>
   <% if @sample.errors.any? %>
     <%= show_noty({message: 'preencha todos os campos necessários'}) %>
-  <% end %>  
+
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <ul>
+      <% @sample.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :first_name, class: "col-sm-2 control-label" %>
