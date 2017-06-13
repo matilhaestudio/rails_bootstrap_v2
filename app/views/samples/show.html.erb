@@ -17,6 +17,15 @@
   <dt>Last name:</dt>
   <dd><%= @sample.last_name %></dd>
 
+  <dt>CNPJ</dt>
+  <dd><%= @sample.cnpj %></dd>
+
+  <dt>Website</dt>
+  <dd><%= @sample.website %></dd>
+
+  <dt>Last name:</dt>
+  <dd><%= @sample.last_name %></dd>
+
   <dt>Phone:</dt>
   <dd><%= @sample.phone %></dd>
 
@@ -50,6 +59,9 @@
   <dt>Picture:</dt>
   <!--<dd><%= image_tag(@sample.picture.to_s) %></dd>-->
   <dd><%= image_tag(@sample.picture.url(:thumb).to_s) %></dd>
+
+  <dt>File:</dt>
+  <%= link_to "Download", @sample.file.url %></td>
 
   <dt>Cpf:</dt>
   <dd><%= @sample.cpf %></dd>

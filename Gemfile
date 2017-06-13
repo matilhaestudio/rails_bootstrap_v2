@@ -50,6 +50,9 @@ gem 'cloudinary', '~> 1.8.0'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 
+# support for content_tag_for method
+gem 'record_tag_helper', '~> 1.0'
+
 # ActiveModel/ActiveRecord validators
 gem 'validators', '~> 2.5.0'
 # Validate, generate and format CPF/CNPJ numbers

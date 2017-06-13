@@ -1,4 +1,7 @@
 pt-BR:
+  errors:
+    messages:
+      mini_magick_processing_error: "Formato de arquivo inválido"
   activerecord:
     attributes:
       defaults: &defaults

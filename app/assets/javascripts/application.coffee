@@ -138,36 +138,36 @@ sendForm = () ->
   $('#submitBtn').click () ->
     $('.simple_form').submit();
 
-# maskInputs = () ->
-#   options = {placeholder: ' ', autoclear: false}
-#   $('.cpf').mask('999.999.999-99', options);
-#   $('.cnpj').mask('99.999.999/9999-99', options)
-#   $('.phone').mask('(99) 9999-9999?9', options);
-#   $('.zipcode').mask('99999-999', options);
-#   $('.hour').mask('99:99', options);
-#   $('.date').mask('99/99/9999', options);
-#   $('.weight').maskMoney({
-#     suffix: ' kg'
-#     allowZero: false
-#     thousands: ''
-#     decimal: '.'
-#     precision: 1
-#     suffixStay: true
-#   });
-#   $('.height').maskMoney({
-#     suffix: ' m'
-#     allowZero: false
-#     thousands: ''
-#     decimal: ','
-#     precision: 2
-#     suffixStay: true
-#   })
-#   $('.website').blur () ->
-#     current_input = $(this);
-#     value = $(this).val();
-#     unless value.includes('http')
-#       value = 'http://' + value
-#       current_input.val(value);
+maskInputs = () ->
+  options = {placeholder: ' ', autoclear: false}
+  $('.cpf').mask('999.999.999-99', options);
+  $('.cnpj').mask('99.999.999/9999-99', options)
+  $('.phone').mask('(99) 9999-9999?9', options);
+  $('.zipcode').mask('99999-999', options);
+  $('.hour').mask('99:99', options);
+  $('.date').mask('99/99/9999', options);
+  # $('.weight').maskMoney({
+  #   suffix: ' kg'
+  #   allowZero: false
+  #   thousands: ''
+  #   decimal: '.'
+  #   precision: 1
+  #   suffixStay: true
+  # });
+  # $('.height').maskMoney({
+  #   suffix: ' m'
+  #   allowZero: false
+  #   thousands: ''
+  #   decimal: ','
+  #   precision: 2
+  #   suffixStay: true
+  # })
+  $('.website').blur () ->
+    current_input = $(this);
+    value = $(this).val();
+    unless value.includes('http')
+      value = 'http://' + value
+      current_input.val(value);
 
 disableInputs = (name) ->
   $('#' + name).click (e) ->
@@ -233,7 +233,7 @@ initFunctions = () ->
   ready() unless $('input[aria-controls=DataTables_Table_0]').length != 0;
   initSwitchery();
   sendForm();
-  #maskInputs();
+  maskInputs();
   disableInputHandling();
   handleCocoon();
   handleUpload();

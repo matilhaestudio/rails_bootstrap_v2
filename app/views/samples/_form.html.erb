@@ -14,13 +14,16 @@
 
   <%= f.input :first_name, placeholder: 'Digite seu nome' %>
   <%= f.input :last_name, placeholder: 'Digite seu sobrenome' %>
-  <%= f.file_field :picture %>
-  <%= f.input :cpf, placeholder: '000.000.000-00' %>
-  <%= f.input :rg, placeholder: '00.000.000-0' %>
-  <%= f.input :birthday, placeholder: 'dd / mm / aaaa', as: :string, input_html: { 'data-provide': "datepicker"} %>
-  <%= f.input :phone, placeholder: '(00) 00000-0000' %>
+  <%= f.input :picture %>
+  <%= f.input :file %>
+  <%= f.input :cpf, placeholder: '000.000.000-00', input_html: { class: "cpf" } %>
+  <%= f.input :rg, placeholder: '00.000.000-0', input_html: { class: "rg" } %>
+  <%= f.input :website, placeholder: 'http://sample.com', input_html: { class: "website" } %>
+  <%= f.input :cnpj, placeholder: '00.000.000/0000-00' %>
+  <%= f.input :birthday, placeholder: 'dd / mm / aaaa', as: :string, input_html: { 'data-provide': "datepicker", class: 'date' } %>
+  <%= f.input :phone, placeholder: '(00) 00000-0000', input_html: { class: "phone" } %>
   <%= f.input :email, placeholder: 'email@exemplo.com' %>
-  <%= f.input :zipcode, as: :zipcode, placeholder: '00000-000' %>
+  <%= f.input :zipcode, as: :zipcode, placeholder: '00000-000', input_html: { class: "zipcode" } %>
   <%= f.input :street, as: :street, placeholder: 'Digite o nome da rua' %>
   <%= f.input :number, placeholder: 'Digite o número' %>
   <%= f.input :neighborhood, as: :neighborhood, placeholder: 'Digite o nome do bairro' %>
