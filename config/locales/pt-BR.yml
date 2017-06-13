@@ -1,5 +1,37 @@
 pt-BR:
   activerecord:
+    attributes:
+      defaults: &defaults
+        first_name: Nome
+        last_name: Sobrenome
+        date_start: Data início
+        date_end: Data fim
+        monday: Segunda
+        tuesday: Terça
+        wednesday: Quarta
+        thursday: Quinta
+        friday: Sexta
+        saturday: Sábado
+        sunday: Domingo
+        password: Senha
+        password_confirmation: Confirmação de senha
+        cpf: CPF
+        rg: RG
+        birthday: Data de nascimento
+        zipcode: CEP
+        street: Rua
+        number: Número
+        neighborhood: Bairro
+        city: Cidade
+        state: Estado
+        complement: Complemento (se houver)
+        phone: Telefone principal
+        fb_url: Link facebook
+        linkedin_url: Link LinkedIn
+        languages: Línguas
+        picture: Foto
+      sample:
+         <<: *defaults
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
