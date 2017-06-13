@@ -141,6 +141,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-switchery'
   #  It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc)
   gem 'rails-assets-jquery.maskedinput'
+  # Date picker
+  gem 'rails-assets-bootstrap-datepicker'
   # Alerts with confirmation
   gem 'rails-assets-sweetalert'
 end

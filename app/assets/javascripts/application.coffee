@@ -14,6 +14,7 @@
 #= require cloudinary
 #= require underscore
 #= require autocomplete_zipcode
+#= require bootstrap-datepicker
 
 
 Noty = {
@@ -30,6 +31,12 @@ Noty = {
 
 $ = jQuery;
 $.noty.defaults.timeout = 5000;
+
+$('.datepicker').datepicker();
+
+
+$('input.datepicker').data({behaviour: "datepicker"}).datepicker();
+
 
 datatablesI18n = {
   "sEmptyTable": "Nenhum registro encontrado",

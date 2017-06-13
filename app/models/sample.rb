@@ -4,7 +4,7 @@ class Sample < ApplicationRecord
   validates_uniqueness_of :cpf, case_sensitive: false
   validates_cpf_format_of :cpf
   validates :cpf, presence: true
-  validates :zipcode, presence: true, format: { with: /\A[0-9]{5}-[0-9]{3}\z/ }
+  #validates :zipcode, presence: true, format: { with: /\A[0-9]{5}-[0-9]{3}\z/ }
   validates :street, presence: true
   validates :number, presence: true
   validates :neighborhood, presence: true

@@ -17,7 +17,7 @@
   <%= f.input :picture %>
   <%= f.input :cpf, placeholder: '000.000.000-00' %>
   <%= f.input :rg, placeholder: '00.000.000-0' %>
-  <%= f.input :birthday, placeholder: 'dd / mm / aaaa' %>
+  <%= f.input :birthday, placeholder: 'dd / mm / aaaa', as: :string, input_html: { 'data-provide': "datepicker"} %>
   <%= f.input :phone, placeholder: '(00) 00000-0000' %>
   <%= f.input :email, placeholder: 'email@exemplo.com' %>
   <%= f.input :zipcode, as: :zipcode, placeholder: '00000-000' %>
