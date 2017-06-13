@@ -129,7 +129,7 @@ end
 
 source 'https://rails-assets.org' do
   # NOTY is a notification library that makes it easy to create alert 
-  gem 'rails-assets-noty'
+  gem 'rails-assets-noty', '~> 2.4'
   # DataTables is a plug-in for advanced interaction controls to any HTML table.
   gem 'rails-assets-datatables.net'
   gem 'rails-assets-datatables.net-bs'

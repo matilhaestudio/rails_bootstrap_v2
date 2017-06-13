@@ -18,3 +18,47 @@
 /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+//
+// noty settings
+// --------------------------------------------------
+.i-am-new {
+
+  li {
+
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 4px !important;
+    color: white !important;
+
+    .noty_type_alert,
+    .noty_type_error {
+      background-color: red;
+      box-shadow: 0 10px 26px 0 rgba(147, 7, 7, 0.2);
+    }
+
+    .noty_type_success,
+    .noty_type_notice {
+      background-color: blue;
+      box-shadow: 0 10px 26px 0 rgba(7, 92, 72, 0.2);
+    }
+
+    // .noty_type_notice {
+    //   background-color: $sunflower-yellow;
+    //   box-shadow: 0 10px 26px 0 rgba(155, 131, 0, 0.2);
+    // }
+
+    .noty_message {
+
+      padding: 20px 26px !important;
+
+      .noty_text {
+        font-weight: 500;
+        letter-spacing: 0.2px;
+      }
+
+    }
+
+  }
+
+}

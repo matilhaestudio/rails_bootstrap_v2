@@ -14,6 +14,7 @@
 #= require cloudinary
 #= require underscore
 
+
 Noty = {
   new: (message, type = 'notification') ->
     noty({
