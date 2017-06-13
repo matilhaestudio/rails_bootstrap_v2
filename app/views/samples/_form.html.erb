@@ -20,12 +20,12 @@
   <%= f.input :birthday, placeholder: 'dd / mm / aaaa' %>
   <%= f.input :phone, placeholder: '(00) 00000-0000' %>
   <%= f.input :email, placeholder: 'email@exemplo.com' %>
-  <%= f.input :zipcode, placeholder: '00000-000' %>
-  <%= f.input :street, placeholder: 'Digite o nome da rua' %>
+  <%= f.input :zipcode, as: :zipcode, placeholder: '00000-000' %>
+  <%= f.input :street, as: :street, placeholder: 'Digite o nome da rua' %>
   <%= f.input :number, placeholder: 'Digite o número' %>
-  <%= f.input :neighborhood, placeholder: 'Digite o nome do bairro' %>
-  <%= f.input :city, placeholder: 'Digite o nome da cidade' %>
-  <%= f.input :state, placeholder: 'Digite o nome do estado' %>
+  <%= f.input :neighborhood, as: :neighborhood, placeholder: 'Digite o nome do bairro' %>
+  <%= f.input :city, as: :city, placeholder: 'Digite o nome da cidade' %>
+  <%= f.input :state, as: :state, placeholder: 'Digite o nome do estado' %>
   <%= f.input :complement, placeholder: 'Digite o nome do complemento (se houver)' %>
   
   <%= f.submit class: "btn btn-primary" %>
