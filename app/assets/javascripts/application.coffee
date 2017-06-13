@@ -13,6 +13,7 @@
 #= require jquery.maskedinput
 #= require cloudinary
 #= require underscore
+#= require autocomplete_zipcode
 
 
 Noty = {

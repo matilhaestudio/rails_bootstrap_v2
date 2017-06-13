@@ -364,7 +364,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autocomplete_zipcode (~> 0.1.0)
+  autocomplete_zipcode (~> 0.1.2)
   better_errors (~> 2.1, >= 2.1.1)
   binding_of_caller (~> 0.7.2)
   bootstrap-generators (~> 3.3.4)
@@ -410,7 +410,7 @@ DEPENDENCIES
   sendgrid (~> 1.2.4)
   sentry-raven (~> 2.5, >= 2.5.1)
   shoulda-matchers (~> 3.1)
-  simple_form (~> 3.5)
+  simple_form (~> 3.4)
   simple_form_custom_inputs (~> 0.1.0)
   simplecov (~> 0.14.1)
   spring (~> 2.0, >= 2.0.2)

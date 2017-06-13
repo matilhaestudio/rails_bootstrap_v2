@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Forms made easy!
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 3.4'
 gem 'simple_form_custom_inputs', '~> 0.1.0'
 # Cocoon makes it easier to handle nested forms.
 gem 'cocoon', '~> 1.2'
@@ -66,7 +66,7 @@ gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
 # A set of Rails responders to dry up your application
 gem 'responders', '~> 2.3'
 #Zipcode auto complete
-gem 'autocomplete_zipcode', '~> 0.1.0'
+gem 'autocomplete_zipcode', '~> 0.1.2'
 
 group :production do
   # Postgres SQL
