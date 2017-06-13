@@ -33,7 +33,15 @@ pt-BR:
       sample:
          <<: *defaults
     errors:
+      models:
+        sample:
+          attributes:
+            cpf:
+              invalid_cpf: "inválido"
+            email:
+              invalid_email: "inválido"
       messages:
+        blank: 'não pode ficar em branco'
         record_invalid: 'A validação falhou: %{errors}'
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
