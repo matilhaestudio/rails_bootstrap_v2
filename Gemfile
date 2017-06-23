@@ -63,7 +63,7 @@ gem 'sendgrid', '~> 1.2.4'
 gem 'nprogress-rails', '~> 0.2.0.2'
 # Useful to make forms and validations, get a list of states in a country
 gem 'city-state', '~> 0.0.13'
-# Bug Tracking 
+# Bug Tracking
 gem 'sentry-raven', '~> 2.5', '>= 2.5.1'
 # Alerts with confirmation
 gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
@@ -73,6 +73,12 @@ gem 'responders', '~> 2.3'
 gem 'autocomplete_zipcode', '~> 0.1.2'
 # CORS
 gem 'rack-cors'
+
+# Search
+gem 'ransack'
+
+# Pagination
+gem 'kaminari'
 
 group :production do
   # Postgres SQL
@@ -91,14 +97,14 @@ group :development do
   # Profiling tool originally to get an insight into application
   # https://github.com/peek/peek
   gem 'peek', '~> 1.0', '>= 1.0.1'
- 
+
   # Better Errors replaces the standard Rails error page with a much better and more useful error page
-  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  # gem 'better_errors', '~> 2.1', '>= 2.1.1'
   # Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
   gem 'brakeman', '~> 3.6', '>= 3.6.2'
   # Provides a dev bar and an overlay in-browser to visualize your UI's rendered partials
   gem 'xray-rails', '~> 0.3.0'
-  
+
   # Is used to easily generate fake data: names, addresses, phone numbers, etc.
   gem 'faker', '~> 1.7', '>= 1.7.3'
   # Utility to install, configure, and extend Git hooks
@@ -136,14 +142,14 @@ group :test do
 end
 
 source 'https://rails-assets.org' do
-  # NOTY is a notification library that makes it easy to create alert 
+  # NOTY is a notification library that makes it easy to create alert
   gem 'rails-assets-noty', '~> 2.4'
   # DataTables is a plug-in for advanced interaction controls to any HTML table.
   gem 'rails-assets-datatables.net'
   gem 'rails-assets-datatables.net-bs'
   # A fast, caching, dynamic inline SVG DOM injection library.
   gem 'rails-assets-svg-injector'
-  # Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style 
+  # Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style
   gem 'rails-assets-switchery'
   #  It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc)
   gem 'rails-assets-jquery.maskedinput'
@@ -152,5 +158,3 @@ source 'https://rails-assets.org' do
   # Alerts with confirmation
   gem 'rails-assets-sweetalert'
 end
-
-

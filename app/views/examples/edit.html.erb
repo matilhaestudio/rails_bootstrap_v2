@@ -1,0 +1,11 @@
+<div class="page-header">
+  <%= link_to examples_path, class: 'btn btn-default' do %>
+    Back
+  <% end %>
+  <%= link_to @example, class: 'btn btn-primary' do %>
+    Show
+  <% end %>
+  <h1>Editing example</h1>
+</div>
+
+<%= render 'form' %>

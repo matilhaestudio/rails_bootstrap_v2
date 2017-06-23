@@ -1,0 +1,24 @@
+<div class="page-header">
+  <%%= link_to new_<%= singular_table_name %>_path, class: 'btn btn-primary' do %>
+    New <%= human_name %>
+  <%% end %>
+  <h1>Listing <%= plural_table_name %></h1>
+</div>
+
+<input placeholder="Buscar" id="search" type="search" aria-controls="DataTables_Table_0">
+
+<div class="table-responsive">
+  <table class="dt table table-striped table-bordered table-hover" data-source="<%%= <%= plural_table_name%>_path(format: :json) %>" data-filter="true">
+    <thead>
+      <tr>
+        <tr>
+    <% attributes.each do |attribute| -%>
+      <th><%= attribute.human_name %></th>
+    <% end -%>
+      <th class="datatable-nosort"></th>
+          <th class="datatable-nosort"></th>
+        </tr>
+      </tr>
+    </thead>
+  </table>
+</div>
