@@ -28,7 +28,7 @@ pt-BR:
         city: Cidade
         state: Estado
         complement: Complemento
-        phone: Telefone 
+        phone: Telefone
         fb_url: Link facebook
         linkedin_url: Link LinkedIn
         languages: Línguas
@@ -39,6 +39,10 @@ pt-BR:
       models:
         sample:
           attributes:
+            cnpj:
+              invalid_cnpj: "inválido"
+            website:
+              url: "inválido"
             cpf:
               invalid_cpf: "inválido"
             email:
