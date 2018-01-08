@@ -49,9 +49,12 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Landing", root_path %></li>
-            <li><%= link_to "Sign in", new_user_registration_path %></li>
-            <li><%= link_to "Form sample", new_sample_path  %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
+            <%= active_li "Sign in", new_user_registration_path unless current_user %>
+            <%= active_li "Form sample", new_sample_path %>
+            <%= mount_navbar %>
+            <%= content_tag(:li) do %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete  %>
+            <% end if current_user %>
           </ul>
         </div>
       </div>
@@ -77,7 +80,7 @@
       </div><!--/row-->
 
       <footer>
-        
+
       </footer>
 
     </div> <!-- /container -->

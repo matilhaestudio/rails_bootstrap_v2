@@ -15,7 +15,7 @@
 #= require underscore
 #= require autocomplete_zipcode
 #= require bootstrap-datepicker
-
+#= require_tree
 
 Noty = {
   new: (message, type = 'notification') ->
@@ -37,95 +37,6 @@ $('.datepicker').datepicker();
 
 $('input.datepicker').data({behaviour: "datepicker"}).datepicker();
 
-
-datatablesI18n = {
-  "sEmptyTable": "Nenhum registro encontrado",
-  "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-  "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-  "sInfoFiltered": "(Filtrados de _MAX_ registros)",
-  "sInfoPostFix": "",
-  "sInfoThousands": ".",
-  "sLengthMenu": "_MENU_ resultados por página",
-  "sLoadingRecords": "Carregando...",
-  "sProcessing": "Processando...",
-  "sZeroRecords": "Nenhum registro encontrado",
-  "sSearch": "Pesquisar",
-  "oPaginate": {
-    "sNext": "Próximo",
-    "sPrevious": "Anterior",
-    "sFirst": "Primeiro",
-    "sLast": "Último"
-  },
-  "oAria": {
-    "sSortAscending": ": Ordenar colunas de forma ascendente",
-    "sSortDescending": ": Ordenar colunas de forma descendente"
-  }
-};
-
-ready = () ->
-  $(".dt").dataTable({
-    "sPaginationType": "full_numbers"
-    "bJQueryUI": true
-    "bProcessing": true
-    "bServerSide": true
-    "lengthChange": true
-    "sAjaxSource": $(".dt").data("source")
-    "aaSorting": [[0, 'desc']]
-    "aoColumnDefs": [{
-      "bSortable": false
-      "aTargets": ["datatable-nosort"]
-    }]
-    "language": datatablesI18n
-  })
-
-  $('.dt').on 'draw.dt', (e, settings)->
-    # datatables' row click
-    $('table tbody tr td').on 'click', ->
-      window.location.href = $('a', this).attr('href')
-
-  $('#allocation-caregivers-datatable').dataTable({
-    "sPaginationType": "full_numbers"
-    "bJQueryUI": true
-    "bProcessing": true
-    "bServerSide": true
-    "sAjaxSource": $("#allocation-caregivers-datatable").data("source")
-    "aoColumnDefs": [{
-      "bSortable": false
-    }]
-    "language": datatablesI18n
-    "deferLoading": 1
-    "fnServerData": ( sSource, aoData, fnCallback, oSettings )->
-      allocationId = $('input[name="allocation[id]"]').val()
-      aoData.push { name: 'id', value: allocationId } if allocationId.length > 0
-
-      aoData = _.union(aoData, $('form').serializeArray())
-
-      oSettings.jqXHR = $.ajax({
-        "dataType": 'json',
-        "url": sSource,
-        "data": aoData,
-        "contentType": "application/json",
-        "success": ( data, textStatus, jqXHR )->
-          $('.has-error').removeClass('has-error')
-          $('span.help-block').remove()
-
-          unless data.errors
-            fnCallback(data, textStatus, jqXHR)
-          else
-            for column, msg of data.errors
-              unless column == 'new_child'
-                if column == 'weekdays'
-                  container = $('.content.week')
-                else
-                  container = $("input[name*='[#{column}]']").parent()
-                container.addClass('has-error')
-                container.append "<span class='help-block'>#{msg}</span>"
-
-            fnCallback({ length: 0, aaData: [], iTotalRecords: 0, iTotalDisplayRecords: 0, suitable: 0 }, textStatus, jqXHR)
-      })
-  })
-
-  $('.modal[start-open="true"]').modal('show')
 
 initSwitchery = () ->
   elem = document.querySelector('.js-switch');
@@ -169,34 +80,6 @@ maskInputs = () ->
       value = 'http://' + value
       current_input.val(value);
 
-disableInputs = (name) ->
-  $('#' + name).click (e) ->
-    e.stopPropagation();
-
-    setTimeout () ->
-      $('.' + name + ' label').removeClass('selected');
-    , 100
-
-    $('.' + name + ' input').attr('disabled', this.checked);
-    $('.' + name + ' input').attr('checked', false);
-
-disableInputsOnInit = (name) ->
-  field = $('#' + name);
-  if field.is(':checked')
-    $('.' + name + ' input').attr('disabled', true);
-    $('.' + name + ' input').attr('checked', false);
-
-disableInputHandling = () ->
-  disableInputsOnInit('special_conditions')
-  disableInputsOnInit('special_tasks')
-  disableInputsOnInit('routine_tasks')
-  disableInputsOnInit('housework')
-
-  disableInputs('special_conditions');
-  disableInputs('special_tasks');
-  disableInputs('routine_tasks');
-  disableInputs('housework');
-
 handleCocoon = () ->
   $('#curriculum_experiences').on 'cocoon:before-remove', (e, item) ->
     $(this).data('remove-timeout', 1000);
@@ -230,11 +113,9 @@ toggleModal = () ->
     $('.modal').modal('toggle');
 
 initFunctions = () ->
-  ready() unless $('input[aria-controls=DataTables_Table_0]').length != 0;
   initSwitchery();
   sendForm();
   maskInputs();
-  disableInputHandling();
   handleCocoon();
   handleUpload();
   toggleModal();

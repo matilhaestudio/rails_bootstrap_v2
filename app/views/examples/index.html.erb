@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to new_example_path, class: 'btn btn-primary' do %>
+    New Example
+  <% end %>
+  <h1>Listing examples</h1>
+</div>
+
+<input placeholder="Buscar" id="search" type="search" aria-controls="DataTables_Table_0">
+
+<div class="table-responsive">
+  <table class="dt table table-striped table-bordered table-hover" data-source="<%= examples_path(format: :json) %>" data-filter="true">
+    <thead>
+      <tr>
+        <tr>
+          <th>Foo</th>
+          <th>Bar</th>
+          <th class="datatable-nosort"></th>
+          <th class="datatable-nosort"></th>
+        </tr>
+      </tr>
+    </thead>
+  </table>
+</div>
