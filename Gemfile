@@ -66,7 +66,7 @@ gem 'city-state', '~> 0.0.13'
 # Bug Tracking
 gem 'sentry-raven', '~> 2.5', '>= 2.5.1'
 # Alerts with confirmation
-gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
+#gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-rails-confirm'
 # A set of Rails responders to dry up your application
 gem 'responders', '~> 2.3'
 # Zipcode auto complete
@@ -87,7 +87,8 @@ end
 
 group :development do
   #SQL lite
-  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+  #gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+  gem 'pg', '~> 0.18.4'
   # Supporting gem for Rails Panel (Google Chrome extension for Rails development)
   gem 'meta_request',  '~> 0.4'
   # Open e-mails on browser tab
